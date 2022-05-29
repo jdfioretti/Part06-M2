@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from '../actions';
+import { INCREMENT, DECREMENT } from '../action-types';
 
 const initialState = {
   count: 0
@@ -11,8 +11,14 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
     // completa para este caso
+    return {
+      contador: state.count + 1
+    }
     case DECREMENT:
     // Fill para este otro
+    return {
+      contador: state.count -1
+    }
     default:
       return state;
   }
